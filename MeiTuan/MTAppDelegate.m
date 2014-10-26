@@ -7,13 +7,14 @@
 //
 
 #import "MTAppDelegate.h"
-
+#import "MainController.h"
 @implementation MTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    MainController *main=[[MainController alloc]init];
+    self.window.rootViewController=main;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
